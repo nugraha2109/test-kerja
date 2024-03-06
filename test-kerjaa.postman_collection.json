@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "85ce073e-51ca-475d-92c7-9849c797130f",
+		"name": "test-kerja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26703076"
+	},
+	"item": [
+		{
+			"name": "komisi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/komisi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"komisi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Keuntungan-marketing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/keuntungan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"keuntungan"
+					],
+					"query": [
+						{
+							"key": "nama",
+							"value": "Danang",
+							"disabled": true
+						},
+						{
+							"key": "bulan",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-pembayaran-All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pembayarans",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pembayarans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post-pembayaran",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pembayarans?penjualan_id=3&marketing_id=1&jumlah=65000000&tanggal_jatuh_tempo=2023-06-25&status=Belum Lunas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pembayarans"
+					],
+					"query": [
+						{
+							"key": "penjualan_id",
+							"value": "3"
+						},
+						{
+							"key": "marketing_id",
+							"value": "1"
+						},
+						{
+							"key": "jumlah",
+							"value": "65000000"
+						},
+						{
+							"key": "tanggal_jatuh_tempo",
+							"value": "2023-06-25"
+						},
+						{
+							"key": "status",
+							"value": "Belum Lunas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-pembayaran-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pembayarans/15",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pembayarans",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-pembayaran",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pembayarans/13?penjualan_id=1&marketing_id=1&jumlah=30000000&tanggal_jatuh_tempo=2023-06-25&status=Lunas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pembayarans",
+						"13"
+					],
+					"query": [
+						{
+							"key": "penjualan_id",
+							"value": "1"
+						},
+						{
+							"key": "marketing_id",
+							"value": "1"
+						},
+						{
+							"key": "jumlah",
+							"value": "30000000"
+						},
+						{
+							"key": "tanggal_jatuh_tempo",
+							"value": "2023-06-25"
+						},
+						{
+							"key": "status",
+							"value": "Lunas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-pembayaran",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pembayarans/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pembayarans",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
